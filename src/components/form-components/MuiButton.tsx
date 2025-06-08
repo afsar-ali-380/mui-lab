@@ -1,7 +1,5 @@
 import { Button, Stack } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
-import { MdDeleteOutline } from "react-icons/md";
-import { MdDelete } from "react-icons/md";
 import { FaDeleteLeft } from "react-icons/fa6";
 
 const MuiButton = () => {

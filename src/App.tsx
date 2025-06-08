@@ -1,17 +1,27 @@
-import { TextField } from "@mui/material";
 import "./App.css";
-import MuiButton from "./components/MuiButton";
-import MuiTypography from "./components/MuiTypography";
 import Project from "./components/Project";
-import MuiTextField from "./components/MuiTextField";
+import MuiBox from "./components/layout-components/MuiBox";
+import MuiStack from "./components/layout-components/MuiStack";
+import MuiGrid from "./components/layout-components/MuiGrid";
+import MuiTypography from "./components/display-components/MuiTypography";
+import MuiTextField from "./components/form-components/MuiTextField";
+import MuiButton from "./components/form-components/MuiButton";
+import MuiIconButton from "./components/form-components/MuiIconButton";
 
 function App() {
   return (
     <div className="App">
       <Project />
+
+      {/* <MuiBox /> */}
+      {/* <MuiStack /> */}
+      <MuiGrid />
+
       {/* <MuiTypography /> */}
-      <MuiButton />
+
       <MuiTextField />
+      <MuiButton />
+      {/* <MuiIconButton /> */}
     </div>
   );
 }

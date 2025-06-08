@@ -1,18 +1,15 @@
-import React from "react";
-import { TextField, TextFieldProps, InputAdornment } from "@mui/material";
+import { InputAdornment, TextField, TextFieldProps } from "@mui/material";
 
-type UiInputFieldProps = TextFieldProps & {
+type CustomInputFieldProps = TextFieldProps & {
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
 };
 
-const UiInputField: React.FC<UiInputFieldProps> = ({
+const CustomInputField: React.FC<CustomInputFieldProps> = ({
   type = "text",
   variant = "outlined",
   size = "small",
-  margin = "dense",
-  error = false,
-  helperText = "",
+  fullWidth = false,
   startIcon,
   endIcon,
   sx,
@@ -23,9 +20,7 @@ const UiInputField: React.FC<UiInputFieldProps> = ({
       type={type}
       variant={variant}
       size={size}
-      margin={margin}
-      error={error}
-      helperText={helperText}
+      fullWidth={fullWidth}
       slotProps={{
         input: {
           startAdornment: startIcon ? (
@@ -38,10 +33,10 @@ const UiInputField: React.FC<UiInputFieldProps> = ({
       }}
       sx={{
         "& .MuiInputBase-input": {
-          fontSize: "15px",
+          fontSize: "14px",
         },
         "& .MuiInputLabel-root": {
-          fontSize: "15px",
+          fontSize: "14px",
         },
         ...sx,
       }}
@@ -50,4 +45,4 @@ const UiInputField: React.FC<UiInputFieldProps> = ({
   );
 };
 
-export default UiInputField;
+export default CustomInputField;
